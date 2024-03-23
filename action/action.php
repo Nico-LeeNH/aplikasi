@@ -11,8 +11,8 @@
         $suplier = $_POST['suplier'];
         $kat     = $_POST['kategori'];
         $sat     = $_POST['satuan'];
-        $beli    = $_POST['beli'];
-        $jual    = $_POST['jual'];
+        $beli    = $_POST['hbeli'];
+        $jual    = $_POST['hjual'];
         $expire  = $_POST['expire'];
         $stok    = $_POST['stok'];
 
@@ -364,7 +364,7 @@
         $subtotal   = $data->subtotal;
         $pot        = $data->pot;
 
-        $simpan = $connect->query("INSERT INTO detail (id, kode_obat, harga, diskon, qty, subtotal, pot)
+        $simpan = $connect->query("INSERT INTO detail (id,kode_obat, harga, diskon, qty, subtotal, pot)
             VALUES ('$kode_trans','$kode','$harga','$diskon','$qty','$subtotal','$pot')");
 
         $sql4 = $connect->query("SELECT * FROM tb_obat WHERE kode = '$kode'");
