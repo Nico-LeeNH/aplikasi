@@ -1,4 +1,4 @@
-CREATE VIEW data_exp AS
+CREATE VIEW expire AS
 SELECT *, CURRENT_DATE() AS sekarang, DATEDIFF(CURRENT_DATE(), expired) AS selisih
 FROM tb_obat
 WHERE STATUS='aktif'

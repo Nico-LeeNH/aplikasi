@@ -1,5 +1,5 @@
 <?php
-$table = 'view_penjualan';
+$table = 'v_penjualan';
 $primaryKey = 'id';
 
 $columns = array(

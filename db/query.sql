@@ -56,8 +56,6 @@ SELECT YEAR(tgl) ,MONTH(tgl) FROM penjualan WHERE   GROUP BY MONTH(tgl)
 
 
 
-
-
 SELECT MONTH(tgl) AS tahun_bulan, COUNT(*) AS jumlah_bulanan, SUM(total_harga)
 FROM  penjualan WHERE kasir='bone'AND tgl LIKE '%2020%'
 GROUP BY MONTH(tgl);

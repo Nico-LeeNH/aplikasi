@@ -10,7 +10,7 @@
                 <br>
 
 
-                <?php $result = $connect->query("SELECT * FROM data_exp WHERE selisih>-210 ORDER BY selisih DESC"); ?>
+                <?php $result = $connect->query("SELECT * FROM expire WHERE selisih>-210 ORDER BY selisih DESC"); ?>
 
                 <table class="table"  width="100%" cellspacing="0" style="font-size: 12px">
                   <thead>
