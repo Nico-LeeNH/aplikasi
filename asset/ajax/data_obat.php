@@ -38,15 +38,16 @@ $columns = array(
            }
 
     ),
-        array(
-            'db' => 'kode',
-            'dt' => 7,
-            'formatter' => function( $d ) {
-                return '
-                <a href="action/action?kode='.$d.'&&act=del-obat" class="btn btn-danger btn-sm"><span class="fa fa-trash"></span>
-                </a> <a href="#edit_modal" class="btn btn-dark btn-sm" data-toggle="modal" data-id="'. $id .'"><span class="fa fa-edit"></span></a>';
-            }
-    )
+    array(
+      'db' => 'kode',
+      'dt' => 7,
+      'formatter' => function ($d, $row) {
+          return '
+              <a href="action/action?kode=' . $d . '&&act=del-obat" class="btn btn-danger btn-sm"><span class="fa fa-trash"></span></a> 
+              <a href="#edit_modal" class="btn btn-dark btn-sm" data-toggle="modal" data-id="' . $row['kode'] . '"><span class="fa fa-edit"></span></a>';
+      }
+  )
+  
 
 );
  
