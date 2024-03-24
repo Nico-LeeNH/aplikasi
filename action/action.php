@@ -99,17 +99,29 @@
 
 
 
-    }elseif($_GET['act']=='del-obat'){
+    }elseif($_GET['act'] == 'del-obat') {
+        if(isset($_GET['kode'])) {
+            $kode = $_GET['kode'];
+            $sql = $connect->query("DELETE FROM tb_obat WHERE kode = '$kode'");
+            if ($sql) {
+                header("location:../home?p=obat&&status=sukses");
+                exit; // Penting: keluar dari skrip setelah pengalihan header
+            } else {
+                // Tangkap pesan kesalahan jika ada
+                $error_message = $connect->error;
+                // Tampilkan pesan kesalahan atau lakukan penanganan kesalahan tambahan
+                echo "Gagal menghapus obat: " . $error_message;
+                exit; // Keluar dari skrip setelah menampilkan pesan kesalahan
+            }
+        } else {
+            // Tampilkan pesan jika parameter kode tidak ditemukan di URL
+            echo "Parameter kode tidak ditemukan dalam permintaan.";
+            exit; // Keluar dari skrip setelah menampilkan pesan
+        }
+    }
+    
 
-        $kode = $_GET['kode'];
-
-        $sql = $connect->query("DELETE FROM tb_obat WHERE kode = '$kode'");
-        if ($sql) {
-
-          header("location:../home?p=obat&&status=sukses");
-
-
-        }else
+else{
 
         $connect->query("UPDATE tb_obat SET status = 'tidak' WHERE kode='$kode' ");
 
@@ -117,7 +129,7 @@
 
 
 
-    }elseif($_GET['act']=='add-sup'){
+    }if($_GET['act']=='add-sup'){
 
     	// $ko = $_POST['kode'];
     	$na = $_POST['nama'];
@@ -126,7 +138,7 @@
     	$em = $_POST['email'];
     	$al = $_POST['alamat'];
 
-		$connect->query("INSERT INTO suplier VALUES ('','$na','$lok','$tel','$em','$al');");
+		$connect->query("INSERT INTO suplier VALUES ('@','$na','$lok','$tel','$em','$al');");
     	if ($connect) {
             header("location:../home?p=suplier&&status=sukses");
     	}else
