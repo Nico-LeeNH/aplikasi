@@ -17,8 +17,15 @@ CONTENT='0; URL=pages/error/index.html'>";
 
                   <div class="my-2"></div>
                   <a href="?p=form-pembelian" class="btn btn-dark"><span class="icon text-white-50"><i class="fas fa-folder-open"></i></span><span class="text"></span><strong>Tambah data </strong></a><p />
+                  <?php 
+            $result   = $connect->query('SELECT max(total_harga) AS kode FROM tb_beli');
+            $execute  = $result->fetch_object();   
+            $nums_row = $result->num_rows;
+            
 
-                <table class="table " id="dataTable" width="100%" cellspacing="0">
+          ?>
+
+                <table class="table" id="dataTable" width="100%" cellspacing="0">
                   <thead>
                     <tr>
                       <th width="100px">No. nota</th>
