@@ -87,7 +87,7 @@ if (isset($_GET['status'])) {
       <form action="action/action?act=add-obat" style="font-size: 14px" method="POST">
         <div class="row form-modal">
           <?php 
-            $result   = $connect->query('SELECT max(kode) AS kode FROM tb_obat');
+            $result   = $connect->query('SELECT max(stok) AS kode FROM dat_obat');
             $execute  = $result->fetch_object();   
             $nums_row = $result->num_rows;
             
@@ -133,14 +133,6 @@ if (isset($_GET['status'])) {
 
           </div>
           <hr width="100%" align="center" color="#0A1B2A">
-          <div class="col-md-6">
-            <label for="exampleFormControlInput1">Harga beli</label>
-            <input type="text" class="form-control" onkeyup="convertToRupiah(this);" style="font-size: 12px" name="hbeli">
-          </div>
-          <div class="col-md-6">
-            <label for="exampleFormControlInput1">Harga jual</label>
-            <input type="text" class="form-control" onkeyup="convertToRupiah(this);" style="font-size: 12px" name="hjual">
-          </div>
           <hr width="100%" align="center" color="#0A1B2A">
           <div class="col-md-6">
             <label for="exampleFormControlInput1">Expired</label>
@@ -196,7 +188,7 @@ if (isset($_GET['status'])) {
             //menggunakan fungsi ajax untuk pengambilan data
             $.ajax({
                 type : 'post',
-                url : 'pages/modul/modal-e-obat.php',
+                url : 'pages/modul/modal-e-suplier.php',
                 data :  'idx='+ idx,
                 success : function(data){
                 $('.hasil-data').html(data);//menampilkan data ke dalam modal

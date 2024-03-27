@@ -54,14 +54,6 @@ $level = $_SESSION['level'];
 
           </div>
           <hr width="100%" align="center" color="#0A1B2A">
-          <div class="col-md-6">
-            <label for="exampleFormControlInput1">Harga beli</label>
-            <input type="text" class="form-control" onkeyup="convertToRupiah(this);" style="font-size: 12px" name="beli" value="<?= $dt->beli ?>">
-          </div>
-          <div class="col-md-6">
-            <label for="exampleFormControlInput1">Harga jual</label>
-            <input type="text" class="form-control" onkeyup="convertToRupiah(this);" style="font-size: 12px" name="jual" value="<?= $dt->jual ?>">
-          </div>
           <hr width="100%" align="center" color="#0A1B2A">
           <div class="col-md-6">
             <label for="exampleFormControlInput1">Expired</label>
