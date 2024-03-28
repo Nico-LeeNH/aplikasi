@@ -188,7 +188,8 @@ die(
               <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                 <div class="bg-white py-2 collapse-inner rounded">
                   <h6 class="collapse-header">Master Data :</h6>
-                  <a class="collapse-item" href="?p=obat">Data Obat</a>
+                  <a class="collapse-item" href="?p=obat
+                  ">Data Obat</a>
                   <a class="collapse-item" href="?p=suplier">Data Suplier</a>
                   <a class="collapse-item" href="?p=satuan">Data Satuan</a>
                   <a class="collapse-item" href="?p=kategori">Data Kategori</a>

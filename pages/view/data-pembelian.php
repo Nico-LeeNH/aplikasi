@@ -60,8 +60,8 @@ if (isset($_GET['status'])) {
                       <th>Nama </th>
                       <th>Suplier</th>
                       <th>Kategori</th>
-                      <th>Harga beli</th>
-                      <th>Harga jual</th>
+                      <!-- <th>Harga beli</th>
+                      <th>Harga jual</th> -->
                       <th>Stok</th>
                       <th style="text-align : center" >Aksi</th>
                     </tr>
@@ -87,7 +87,7 @@ if (isset($_GET['status'])) {
       <form action="action/action?act=add-obat" style="font-size: 14px" method="POST">
         <div class="row form-modal">
           <?php 
-            $result   = $connect->query('SELECT max(stok) AS kode FROM dat_obat');
+            $result   = $connect->query('SELECT max(kode) AS kode FROM data_suplier');
             $execute  = $result->fetch_object();   
             $nums_row = $result->num_rows;
             
@@ -180,7 +180,7 @@ if (isset($_GET['status'])) {
 
 
 <!-- --------------------------------------------------------------------------------------------------------------------- -->
-  <!-- <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> -->
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
   <script type="text/javascript">
     $(document).ready(function(){
         $('#edit_modal').on('show.bs.modal', function (e) {

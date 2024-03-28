@@ -4,9 +4,9 @@
     $get_level = $_SESSION['level'];
 
     if ($get_level == 'Admin') {
-      $table = 'dat_obat';   
+      $table = 'data_suplier';   
     }else{
-      $table = 'data_obat';   
+      $table = 'dat_obat';   
     }
 
   $primaryKey = 'kode';
@@ -16,23 +16,10 @@
       array( 'db' => 'nama','dt' => 1 ),
       array( 'db' => 'suplierid','dt' => 2 ),
       array( 'db' => 'kategori','dt' => 3 ),
-      array(
-        'db'        => 'beli',
-        'dt'        => 4,
-        'formatter' => function( $d, $row ) {
-          return 'Rp. '.(number_format($d));
-        }
-  ),
-      array(
-        'db'        => 'jual',
-        'dt'        => 5,
-        'formatter' => function( $d, $row ) {
-          return 'Rp. '.(number_format($d));
-        }
-  ),
+
           array(
             'db'        => 'stok',
-            'dt'        => 6,
+            'dt'        => 4,
             'formatter' => function( $d, $row ) {
               return(number_format($d));
             }
@@ -40,7 +27,7 @@
       ),
       array(
         'db' => 'kode',
-        'dt' => 7,
+        'dt' => 5,
         'formatter' => function ($d, $row) {
             return '
                 <a href="action/action?kode=' . $d . '&&act=del-obat" class="btn btn-danger btn-sm"><span class="fa fa-trash"></span></a> 
