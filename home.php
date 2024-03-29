@@ -458,7 +458,7 @@ die(
           
           }elseif ($getpage == 'suplier') {
 
-                    include 'pages/view/data-suplier.php';
+                    include 'pages/view/data-supl.php';
 
           }elseif ($getpage == 'kategori') {
             
