@@ -6,7 +6,8 @@
     if ($get_level == 'Admin') {
       $table = 'data_obat';   
     }else{
-      $table = 'dat_obat';   
+      $table = 'dat_obat'; 
+        
     }
 
   $primaryKey = 'kode';

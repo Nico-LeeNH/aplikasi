@@ -53,7 +53,7 @@ if (isset($_GET['status'])) {
                     <span class="text"></span><strong>Tambah data </strong>
                   </a><p />
 
-                <table id="data_obat" class="table"  width="100%" cellspacing="0" style="font-size: 12px">
+                <table id="data_suplier " class="table"  width="100%" cellspacing="0" style="font-size: 12px">
                   <thead>
                     <tr>
                       <th width="40px">Kode</th>
@@ -180,7 +180,7 @@ if (isset($_GET['status'])) {
 
 
 <!-- --------------------------------------------------------------------------------------------------------------------- -->
-  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script> 
+  <!-- <script src="https://code.jquery. com/jquery-3.1.1.min.js"></script>  -->
   <script type="text/javascript">
     $(document).ready(function(){
         $('#edit_modal').on('show.bs.modal', function (e) {

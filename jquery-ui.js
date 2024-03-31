@@ -10,7 +10,8 @@
 		define([ "jquery" ], factory );
 	} else {
 
-		// Browser globals
+		// Browser gl
+		ls
 		factory( jQuery );
 	}
 }(function( $ ) {
