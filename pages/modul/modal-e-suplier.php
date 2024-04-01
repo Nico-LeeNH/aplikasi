@@ -25,7 +25,7 @@ $level = $_SESSION['level'];
           <div class="col-md-12" style="padding-top: 10px">
         
             <label for="exampleFormControlInput1">Suplier</label>
-            <select class="form-control" style="font-size: 12px" name="suplier">
+            <select class="form-control" id="suplier" style="font-size: 12px" name="suplier">
             <?php $no=1;
                  $res = $connect->query('SELECT * FROM suplier'); 
                  while ($data = $res->fetch_object()) { ?>

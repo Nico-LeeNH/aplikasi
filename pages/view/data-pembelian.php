@@ -53,7 +53,7 @@ if (isset($_GET['status'])) {
                     <span class="text"></span><strong>Tambah data </strong>
                   </a><p />
 
-                <table id="data_suplier " class="table"  width="100%" cellspacing="0" style="font-size: 12px">
+                <table id="suplier" class="table"  width="100%" cellspacing="0" style="font-size: 12px">
                   <thead>
                     <tr>
                       <th width="40px">Kode</th>
@@ -182,18 +182,16 @@ if (isset($_GET['status'])) {
 <!-- --------------------------------------------------------------------------------------------------------------------- -->
   <!-- <script src="https://code.jquery. com/jquery-3.1.1.min.js"></script>  -->
   <script type="text/javascript">
-    $(document).ready(function(){
-        $('#edit_modal').on('show.bs.modal', function (e) {
-            var idx = $(e.relatedTarget).data('id');
-            //menggunakan fungsi ajax untuk pengambilan data
-            $.ajax({
-                type : 'post',
-                url : 'pages/modul/modal-e-suplier.php',
-                data :  'idx='+ idx,
-                success : function(data){
-                $('.hasil-data').html(data);//menampilkan data ke dalam modal
-                }
-            });
-         });
+    $(document).ready(function() {
+    $('#exampleModalCenter').on('show.bs.modal', function (e) {
+        $.ajax({
+            type: 'GET',
+            url: 'get_suplier.php', // Ganti dengan alamat file PHP yang sesuai
+            success: function(data) {
+                // Masukkan opsi suplier ke dalam elemen select di dalam modal
+                $('#suplier').html(data);
+            }
+        });
     });
+});
   </script>
